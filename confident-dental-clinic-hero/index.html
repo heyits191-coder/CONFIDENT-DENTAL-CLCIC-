@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confident Dental Clinic | Dr. Anamika Sinha</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ivory: '#FCFAF7',
+              gold: {
+                light: '#E5D5B7',
+                DEFAULT: '#C5A059',
+                dark: '#A38446',
+              },
+              charcoal: '#2D2D2D',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        background-color: #FCFAF7;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      ::selection {
+        background: #C5A059;
+        color: white;
+      }
+      .scroll-indicator::after {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 40px;
+        background: linear-gradient(to bottom, #C5A059, transparent);
+        margin: 8px auto 0;
+        animation: scrollLine 2.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      @keyframes scrollLine {
+        0% { transform: scaleY(0); transform-origin: top; }
+        40% { transform: scaleY(1); transform-origin: top; }
+        60% { transform: scaleY(1); transform-origin: bottom; }
+        100% { transform: scaleY(0); transform-origin: bottom; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
